@@ -31,10 +31,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/hello", "/user/new").permitAll()
+                .requestMatchers("/hello", "/user/new","/api/Products/all","/api/Customer/all").permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/customer/**").authenticated()
+                .anyRequest().authenticated()
                 .and().formLogin()
                 .and().build();
     }

@@ -28,15 +28,4 @@ public class Product {
     private float Price;
     private String url;
 
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "ProductID=" + ProductID +
-                ", ProductName='" + ProductName + '\'' +
-                ", Price=" + Price +
-                ", url='" + url + '\'' +
-                '}';
-    }
-
 }

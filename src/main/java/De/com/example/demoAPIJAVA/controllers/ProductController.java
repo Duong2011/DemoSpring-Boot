@@ -27,14 +27,14 @@ import java.util.Optional;
         modelAndView.getModel();
         return modelAndView;
     }
-
-    // example CRUD
-    @GetMapping("")
+    // get all
+    @GetMapping("/all")
     public List<Product> GetAllProduct(){
         return repository.findAll();
     }
 
-    // get detail product
+    // example CRUD
+    // get detail product by id
     @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('ROLE_USER')")
     ResponseEntity<ResponseObject> findById(@PathVariable Long id)
