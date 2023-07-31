@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-
+@RequestMapping("/Customer")
 public class CustomerController {
     CustomerRepository repository;
 
